@@ -1,3 +1,23 @@
 *{
   border: red dotted 1px;
 }
+
+.index-wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  font-size: calc(20pt + .75vw);
+  text-align: center;
+}
+
+.recipe-card{
+  height: 40vh;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px black solid;
+}
+
+.main-page-image{
+  top: -50%;
+  left: -50%;
+}

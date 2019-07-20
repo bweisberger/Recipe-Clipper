@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Show Route</title>
+  </head>
+  <body>
+    <h1><%=recipe.name%></h1>
+    <h2>by <a class=link-to-site href="<%=recipe.link%>"><%=recipe.author%></a></h2>
+
+    <div class="show-wrapper">
+      <div class="recipe-card">
+        <img src="<%=recipe.img%>" alt="<%=recipe.name%> image">
+      </div>
+      <form class="" action="/recipes/<%=recipe._id%>/edit" method="get">
+        <input type="submit" name="" value="Edit Recipe Information">
+      </form>
+    </div>
+  </body>
+</html>

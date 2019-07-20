@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>New Route</title>
+  </head>
+  <body>
+    <h1>New Recipe Page</h1>
+    <form class="new-recipe" action="/recipes/<%=recipe._id%>?_method=PUT" method="post">
+      Name: <input type="text" name="name" value="<%=recipe.name%>">
+      Author: <input type="text" name="author" value="<%=recipe.author%>">
+      Link Address: <input type="text" name="link" value="<%=recipe.link%>">
+      Image Address: <input type="text" name="img" value="<%=recipe.img%>">
+      <input type="submit" name="" value="Submit Changes">
+    </form>
+  </body>
+</html>
