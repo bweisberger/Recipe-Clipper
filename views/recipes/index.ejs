@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Index Route</title>
+  </head>
+  <body>
+    <h1>Index Page</h1>
+    <form class="" action="/recipes/new" method="get">
+      <input type="submit" name="" value="Submit New Recipe">
+    </form>
+    <%for(let i = 0; i < recipes.length; i++){%>
+    <div class="recipe-card">
+      <a href="/<%=recipes[i]._id%>"><%=recipes[i].name%></a>
+      <%}%>
+    </div>
+  </body>
+</html>
