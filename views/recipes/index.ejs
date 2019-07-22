@@ -6,16 +6,16 @@
     <title>Index Route</title>
   </head>
   <body>
+    <div class="index-page">
     <%-include partials/_navbar.ejs%>
     <h1>Index Page</h1>
     <form class="" action="/recipes/new" method="get">
       <input type="submit" name="" value="Submit New Recipe">
     </form>
-    <div class="index-wrapper">
       <%for(let i = 0; i < recipes.length; i++){%>
       <div class="recipe-card">
-        <a href="/recipes/<%=recipes[i]._id%>"><%=recipes[i].name%></a>
-        <img class="main-page-image" src="<%=recipes[i].img%>" alt="<%=recipes[i].name%> Image">
+        <a href="/recipes/<%=recipes[i]._id%>"><%=recipes[i].name%>
+        <img class="recipe-card-image" src="<%=recipes[i].img%>" alt="<%=recipes[i].name%> Image"></a>
         <form class="" action="/recipes/<%=recipes[i]._id%>?_method=DELETE" method="post">
           <input type="submit" name="" value="Delete Recipe">
         </form>

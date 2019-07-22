@@ -2,22 +2,52 @@
   border: red dotted 1px;
 }
 
-.index-wrapper{
+h1 {
+  text-align: center;
+}
+
+.recipe-card > a {
+ text-decoration: none;
+ color: black;
+}
+
+.index-page{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 1fr 8fr 1fr;
   grid-gap: 10px;
   font-size: calc(20pt + .75vw);
   text-align: center;
 }
 
+.show-title, .show-byline{
+  display: inline-block;
+}
+
+.show-wrapper {
+  display: grid;
+}
+
+.navbar {
+  font-size: calc(18pt + .5vw);
+}
+
 .recipe-card{
+  grid-column: 2;
+  grid-row: 2;
   height: 40vh;
+  width: 20vw;
   border-radius: 10px;
   overflow: hidden;
   border: 2px black solid;
+  font-size: calc(16pt + .5vw);
+  text-decoration: none;
+  color: black;
+  font-family: fantasy;
+  box-shadow: 8px 5px 3px grey;
 }
 
-.main-page-image{
-  top: -50%;
-  left: -50%;
+.recipe-card-image{
+  max-width: 100%;
+  max-height: auto;
 }

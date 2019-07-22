@@ -5,6 +5,8 @@ const recipeSchema = new mongoose.Schema({
   author: String,
   img: String,
   link: {type:String, required:true},
+  ingredients: [{type:String}],
+  directions: [{type:String}],
   notes: [{type:String}]
 })
 

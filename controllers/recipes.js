@@ -5,7 +5,7 @@ recipesArr = require('../models/populateRecipes')
 
 //index route
 router.get('/', (req, res)=>{
-  Recipes.find((err, recipes)=>{
+  Recipes.insertMany(recipesArr, (err, recipes)=>{
     if(err) {
       res.send(err);
     } else {
