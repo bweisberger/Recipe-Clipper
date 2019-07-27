@@ -10,16 +10,19 @@
     <%-include partials/_navbar.ejs%>
       <h1 class="show-title"><%=recipe.name%></h1> <h2 class="show-byline">by <a class=link-to-site href="<%=recipe.link%>"><%=recipe.author%></a></h2>
       <div class="recipe-card">
-        <img src="<%=recipe.img%>" alt="<%=recipe.name%> image">
-        <ul> Ingredients
-          <%recipe.ingredients.forEach(function(ingredient){%>
-          <li><%=ingredient%></li>
-        <%})%>
-        </ul>
+        <img class='show-page-image' src="<%=recipe.img%>" alt="<%=recipe.name%> image">
       </div>
+      <ul class='ingredients-list'> Ingredients
+        <%recipe.ingredients.forEach(function(ingredient){%>
+        <li><%=ingredient%></li>
+      <%})%>
+      </ul>
       <form class="" action="/recipes/<%=recipe._id%>/edit" method="get">
         <input type="submit" name="" value="Edit Recipe Information">
       </form>
+      <form class="" action="/recipes/<%=recipe._id%>?_method=DELETE" method="post">
+          <input type="submit" name="" value="Delete Recipe">
+        </form>
     </div>
   </body>
 </html>
