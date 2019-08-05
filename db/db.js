@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const connectionString = 'mongodb://localhost/coffee';
+const connectionString = process.env.MONGODB_URI;
 
 mongoose.connect(connectionString, {useNewUrlParser: true, useCreateIndex: true}, ()=>{
   console.log("connected to MONGOOOOOOSE")

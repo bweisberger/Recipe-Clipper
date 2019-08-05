@@ -14,6 +14,6 @@ app.get('/', (req, res)=>{
   res.send("Base Page")
 });
 
-app.listen(9000, ()=>{
-  console.log("Listening on port 9000");
+app.listen(process.env.PORT, ()=>{
+  console.log("Listening on port " + process.env.PORT);
 });
