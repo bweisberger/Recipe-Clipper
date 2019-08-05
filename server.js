@@ -13,7 +13,7 @@ app.use(express.static('public'))
 app.use('/recipes', recipesController);
 
 app.get('/', (req, res)=>{
-  res.send("Base Page")
+  res.redirect('/recipes/')
 });
 
 app.listen(process.env.PORT, ()=>{
